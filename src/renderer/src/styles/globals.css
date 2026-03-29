@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #1a1a1a;
+    overflow: hidden;
+    user-select: none;
+  }
+}
+
+@layer components {
+  .lcd-screen {
+    background-color: #1A2B1A;
+    font-family: 'Courier New', monospace;
+    color: #7FCC7F;
+    text-shadow: 0 0 4px rgba(127, 204, 127, 0.6);
+    image-rendering: pixelated;
+  }
+
+  .hw-button {
+    @apply bg-panel-light rounded text-silk text-xs font-silk font-medium uppercase tracking-wide;
+    @apply shadow-button-up active:shadow-button-down active:translate-y-px;
+    @apply transition-all duration-75 cursor-pointer select-none;
+    @apply border border-black/30;
+  }
+
+  .hw-button-led {
+    @apply hw-button flex flex-col items-center gap-1;
+  }
+
+  .led {
+    @apply w-2 h-2 rounded-full bg-led-off;
+  }
+
+  .led-green {
+    @apply bg-led-green shadow-led-green;
+  }
+
+  .led-amber {
+    @apply bg-led-amber shadow-led-amber;
+  }
+
+  .led-red {
+    @apply bg-led-red shadow-led-red;
+  }
+
+  .panel-section {
+    @apply bg-panel-mid rounded p-2 border border-black/20;
+  }
+
+  .section-label {
+    @apply text-silk/50 text-[9px] font-silk uppercase tracking-widest mb-1.5 text-center;
+  }
+}

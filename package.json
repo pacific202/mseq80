@@ -1,0 +1,44 @@
+{
+  "name": "mc80-emu",
+  "version": "0.1.0",
+  "description": "Roland MC-80 MicroComposer Software Emulator",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "package": "npm run build && electron-builder",
+    "postinstall": "electron-rebuild -f -w better-sqlite3"
+  },
+  "devDependencies": {
+    "@electron-toolkit/tsconfig": "^1.0.1",
+    "@electron/rebuild": "^4.0.0",
+    "@types/better-sqlite3": "^7.6.8",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "autoprefixer": "^10.4.19",
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.0",
+    "electron-vite": "^2.3.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "@electron-toolkit/utils": "^3.0.0",
+    "@radix-ui/react-dialog": "^1.1.0",
+    "@radix-ui/react-dropdown-menu": "^2.1.0",
+    "@radix-ui/react-scroll-area": "^1.1.0",
+    "@radix-ui/react-slider": "^1.2.0",
+    "@radix-ui/react-toggle": "^1.1.0",
+    "@radix-ui/react-toggle-group": "^1.1.0",
+    "@radix-ui/react-tooltip": "^1.1.0",
+    "better-sqlite3": "^11.0.0",
+    "clsx": "^2.1.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "tailwind-merge": "^2.3.0",
+    "zustand": "^4.5.0"
+  }
+}
